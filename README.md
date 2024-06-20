@@ -1,3 +1,5 @@
+# simple ip checker by Jox
+
 Misusing IP Checker Tools: The Dark Side
 While IP checker tools offer numerous benefits, misusing them can lead to unintended consequences. Here are some of the risks associated with misusing IP checker tools:
 Legal Issues: Misusing IP checker tools to gather information about individuals or organizations without their consent can lead to legal issues. In some jurisdictions, this may be considered a breach of privacy laws.

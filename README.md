@@ -1,4 +1,4 @@
-# simple ip checker by Jox
+# Simple ip checker by Jox
 
 Misusing IP Checker Tools: The Dark Side
 While IP checker tools offer numerous benefits, misusing them can lead to unintended consequences. Here are some of the risks associated with misusing IP checker tools:
@@ -11,3 +11,7 @@ Obtain Consent: Always obtain consent from the owner of an IP address before usi
 Use Reputable Tools: Choose reputable and trustworthy IP checker tools. Avoid using tools that may compromise your network or violate privacy laws.
 Use for Legitimate Purposes: Use IP checker tools only for legitimate purposes such as network troubleshooting, security enhancement, and analytics.
 Respect Privacy: Respect the privacy of individuals and organizations when using IP checker tools. Do not use these tools to gather information about individuals or organizations without their consent.
+
+
+# Warning
+am not responsible for any misuse of the tool by its users. It is essential to understand and respect the legal and ethical guidelines associated with using such a tool. Always obtain consent from the owner of an IP address before using the tool to gather information about them, and use it solely for legitimate purposes. I expressly disclaim any liability that may arise from the misuse of my IP checker tool. Users must take full responsibility for their actions and ensure they are using the tool ethically and legally.

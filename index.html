@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f5f5f5;
+      }
+  input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  #result {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    font-size: 16px;
+  }
+</style>
+<title>Minimalist IP Checker</title>
+  </head>
+  <body>
+    <h1>IP Checker</h1>
+    <input type="text" id="ipInput" placeholder="Enter IP address" />
+    <button onclick="checkIp()">Check IP</button>
+    <div id="result"></div>
+<script>
+  function checkIp() {
+    var ipAddress = document.getElementById('ipInput').value;
+    var resultDiv = document.getElementById('result');
+
+    fetch('https://ipapi.co/' + ipAddress + '/json/')
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        resultDiv.innerHTML = `
+          <p><strong>IP:</strong> ${data.ip}</p>
+          <p><strong>City:</strong> ${data.city}</p>
+          <p><strong>Region:</strong> ${data.region}</p>
+          <p><strong>Country:</strong> ${data.country_name}</p>
+          <p><strong>Country Code:</strong> ${data.country_code}</p>
+          <p><strong>Continent Code:</strong> ${data.continent_code}</p>
+          <p><strong>Postal:</strong> ${data.postal}</p>
+          <p><strong>Timezone:</strong> ${data.timezone}</p>
+          <p><strong>UTC Offset:</strong> ${data.utc_offset}</p>
+          <p><strong>Latitude:</strong> ${data.latitude}</p>
+          <p><strong>Longitude:</strong> ${data.longitude}</p>
+          <p><strong>Calling Code:</strong> ${data.country_calling_code}</p>
+          <p><strong>Currency:</strong> ${data.currency}</p>
+          <p><strong>Languages:</strong> ${data.languages}</p>
+          <p><strong>ISP:</strong> ${data.org}</p>
+          <p><strong>ASN:</strong> ${data.asn}</p>
+          ${
+            data.asn_organization
+              ? `<p><strong>AS Organization:</strong> ${data.asn_organization}</p>`
+              : ''
+          }
+          ${
+            data.carrier
+              ? `<p><strong>Mobile:</strong> ${data.carrier}</p>`
+              : ''
+          }
+          ${
+            data.threat
+              ? `<p><strong>Threat Level:</strong> ${data.threat}</p>`
+              : ''
+          }
+          ${
+            data.detailed_location
+              ? `<p><strong>Detailed Location:</strong> ${data.detailed_location}</p>`
+              : ''
+          }
+          ${
+            data.reverse
+              ? `<p><strong>Reverse DNS:</strong> ${data.reverse}</p>`
+              : ''
+          }
+          ${
+            data.abuse
+              ? `<p><strong>Abuse Contact:</strong> ${data.abuse}</p>`
+              : ''
+          }
+          ${
+            data.type
+              ? `<p><strong>IP Type:</strong> ${data.type}</p>`
+              : ''
+          }
+          ${
+            data.assignment_type
+              ? `<p><strong>Assignment Type:</strong> ${data.assignment_type}</p>`
+              : ''
+          }
+          ${
+            data.domain
+              ? `<p><strong>Domain:</strong> ${data.domain}</p>`
+              : ''
+          }
+          ${
+            data.netspeed_down
+              ? `<p><strong>Network Speed Down:</strong> ${data.netspeed_down} Mbps</p>`
+              : ''
+          }
+          ${
+            data.netspeed_up
+              ? `<p><strong>Network Speed Up:</strong> ${data.netspeed_up} Mbps</p>`
+              : ''
+          }
+        `;
+      })
+      .catch(function (error) {
+        resultDiv.innerHTML = `<p>Error: ${error}</p>`;
+      });
+  }
+</script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-# Simple ip checker by Jox
+# Simple IP checker by Jox
 
 Misusing IP Checker Tools: The Dark Side
 While IP checker tools offer numerous benefits, misusing them can lead to unintended consequences. Here are some of the risks associated with misusing IP checker tools:
